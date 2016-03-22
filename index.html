@@ -1,0 +1,31 @@
+<!doctype html>
+<html manifest="home.appcache.no">
+  <head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name = "viewport" content = "width = device-width,initial-scale=1.0, user-scalable = yes">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <title>A blank canvas</title>
+    <script type="text/javascript" src="resources/js/amd/require.js"></script>
+    <script>
+      "use strict"
+      require.config({
+				baseUrl: "./", 
+				paths: { 
+					"js": "resources/js/components"
+				}, 
+				waitSeconds: 2 
+			 });
+       
+       require(["js/boot"],function(boot){
+          boot.boot();
+         });
+    </script>
+  </head>
+  <body>
+    <canvas id="my-canvas" width="400" height="300">
+      Your browser does not support the HTML5 canvas element.
+    </canvas>
+  </body>
+</html>
