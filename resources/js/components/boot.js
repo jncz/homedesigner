@@ -7,8 +7,9 @@ define(["js/render/Mode2d"],function(Mode2d){
         //gl.clear(gl.COLOR_BUFFER_BIT);
         var c = canvas.getContext("2d");
         //console.log(c);
-        var d2 = new Mode2d();
-        d2.boot(c);
+        var d2 = new Mode2d(c);
+        d2.boot();
+        d2.handleEvent();
         }
     };
   
